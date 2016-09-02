@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>User Story Manager</title>
+</head>
+<body>
+    <h2>User Story Manager</h2>
+    <table border="1">
+        <thead>
+            <th>Story title</th>
+            <th>User story</th>
+            <th>Acceptance criteria</th>
+            <th>Business value</th>
+            <th>Estimation time</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+        {% for entry in entries %}
+            <tr>
+                <td>{{line['story_title']}}</td>
+                <td>{{line['user_story']}}</td>
+                <td>{{line['criteria']}}</td>
+                <td>{{line['business_value']}}</td>
+                <td>{{line['estimation_time']}}</td>
+                <td>{{line['status']}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
