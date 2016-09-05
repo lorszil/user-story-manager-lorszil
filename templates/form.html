@@ -4,18 +4,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>User story manager</title>
+    <h1><title>User story manager</title></h1>
 </head>
 
 <body>
-    <h1>User Story Manager - Add new Story</h1>
-    <form action="/save" method="post">
-    <h4>Story title:</h4><br><input type="text" name="story_title"> <br>
-    <h4>User story:</h4><br><input type="text" name="user_story" ><br>
-    <h4>Acceptance criteria:</h4><br><input type="text" name="criteria"><br>
-    <h4>Buisness value:</h4><br><input type="number" name="business_value" step="100" min="100" max="1500"><br>
-    <h4>Estimation time (h):</h4><br><input type="number" name="estimation_time" step="0.5" min="0.5" max="40"><br>
+    <h2>{{ title }}</h2>
+    <form action="/story" method="post">
+    <h4>Story title:</h4><br><textarea name="story_title" id="story_title" size="78">{{user_story.story_title}}</textarea><br>
+    <h4>User story:</h4><br><textarea name="user_story" id="user_story" rows="5" cols="60">{{user_story.user_story}}</textarea><br>
+    <h4>Acceptance criteria:</h4><br><textarea name="criteria" id="criteria" rows="7" cols="60">{{user_story.criteria}}</textarea><br>
+    <h4>Buisness value:</h4><br><input type="number" name="business_value" value={{user_story.business_value} step="100" min="100" max="1500"><br>
+    <h4>Estimation time (h):</h4><br><input type="number" name="estimation_time"  value={{user_story.estimation}} step="0.5" min="0.5" max="40"><br>
+    <h4>Status</h4>
     <select name="status">
+        <option value={{user_story.status}}>{{user_story.status}}</option>
         <option value="planning">Planning</option>
         <option value="todo">To do</option>
         <option value="inprogress">In progress</option>
@@ -23,10 +25,8 @@
         <option value="done">Done</option>
     </select>
     <br>
-    <input type="submit" value="Save">
-</form>
-
-
+    <button type="submit">Save</button>
+    </form>
 </body>
 
 </html>
