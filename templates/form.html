@@ -5,29 +5,26 @@
 <style>
 body {
     text-align: center;
-    border: 2px solid black;
-    width:400px;
-    padding: 10px;
+    width: 400px;
+
+    border: 5px solid black;
 }
 </style>
 
 <head>
     <meta charset="UTF-8">
-    <h1><title>User story manager</title></h1>
+    <title>User story manager</title>
 </head>
 
 <body>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <h2>User story manager</h2>
     <form method="post">
-    <fieldset style="width:400px">
-    <h2>{{ title }}</h2>
-    <h4>Story title:</h4><br><textarea name="story_title" size="50">{{user_story.story_title}}</textarea><br>
-    <h4>User story:</h4><br><textarea name="user_story" size="50">{{user_story.user_story}}</textarea><br>
-    <h4>Acceptance criteria:</h4><br><textarea name="criteria" size="50">{{user_story.criteria}}</textarea><br>
-    <h4>Buisness value:</h4><br><input type="number" name="business_value" value={{user_story.business_value}} step="100" min="100" max="1500"><br>
-    <h4>Estimation time (h):</h4><br><input type="number" name="estimation_time"  value={{user_story.estimation_time}} step="0.5" min="0.5" max="40"><br>
+    <h3>{{ title }}</h4>
+    <h4>Story title:</h4><p><textarea name="story_title" size="5">{{user_story.story_title}}</textarea></p>
+    <h4>User story:</h4><p><textarea name="user_story" size="50">{{user_story.user_story}}</textarea><p>
+    <h4>Acceptance criteria:</h4><p><textarea name="criteria" size="50">{{user_story.criteria}}</textarea></p>
+    <h4>Buisness value:</h4><p><input type="number" name="business_value" value={{user_story.business_value}} step="100" min="100" max="1500"></p>
+    <h4>Estimation time (h):</h4><br><input type="number" name="estimation_time"  value={{user_story.estimation_time}} step="0.5" min="0.5" max="40">
     <h4>Status</h4>
     <select name="status" value={{user_story.status}}>
         <option value="Planning">Planning</option>
@@ -36,8 +33,9 @@ body {
         <option value="Review">Review</option>
         <option value="Done">Done</option>
     </select>
-    <br>
+    <p>
     <button type="submit">Save</button>
+    </p>
     </form>
 </body>
 

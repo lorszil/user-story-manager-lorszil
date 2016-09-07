@@ -14,8 +14,8 @@
             <th>Business value</th>
             <th>Estimation time</th>
             <th>Status</th>
-            <td>Delete</td>
             <td>Edit</td>
+            <td>Delete</td>
         </thead>
         <tbody>
         {% for user_story in user_stories %}
@@ -26,8 +26,8 @@
                 <td>{{user_story.business_value}}</td>
                 <td>{{user_story.estimation_time}}</td>
                 <td>{{user_story.status}}</td>
-                <td><button type="submit">Delete</button></td>
                 <td><button type="submit">Edit</button></td>
+                <td><button type="submit">Delete</button></td>
             </tr>
         {% endfor %}
         </tbody>

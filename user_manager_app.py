@@ -47,8 +47,7 @@ def list_all_user_stories():
 
 @app.route('/delete/<story_id>', methods=['GET'])
 def delete_data(story_id):
-    data = UserStory.get(UserStory.id == story_id)
-    data.delete_instance()
+    UserStory.delete_data()
 
 
 if __name__ == '__main__':
