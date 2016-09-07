@@ -17,9 +17,9 @@ class BaseModel(Model):
 
 
 class UserStory(BaseModel):
-    story_title = TextField()
-    user_story = TextField()
-    criteria = TextField()
+    story_title = CharField(null=True)
+    user_story = CharField(null=True)
+    criteria = CharField(null=True)
     business_value = IntegerField()
     estimation_time = FloatField()
     status = CharField()

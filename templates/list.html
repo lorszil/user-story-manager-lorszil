@@ -14,16 +14,20 @@
             <th>Business value</th>
             <th>Estimation time</th>
             <th>Status</th>
+            <td>Delete</td>
+            <td>Edit</td>
         </thead>
         <tbody>
-        {% for entry in entries %}
+        {% for user_story in user_stories %}
             <tr>
-                <td>{{line['story_title']}}</td>
-                <td>{{line['user_story']}}</td>
-                <td>{{line['criteria']}}</td>
-                <td>{{line['business_value']}}</td>
-                <td>{{line['estimation_time']}}</td>
-                <td>{{line['status']}}</td>
+                <td>{{user_story.story_title}}</td>
+                <td>{{user_story.user_story}}</td>
+                <td>{{user_story.criteria}}</td>
+                <td>{{user_story.business_value}}</td>
+                <td>{{user_story.estimation_time}}</td>
+                <td>{{user_story.status}}</td>
+                <td><button type="submit">Delete</button></td>
+                <td><button type="submit">Edit</button></td>
             </tr>
         {% endfor %}
         </tbody>
