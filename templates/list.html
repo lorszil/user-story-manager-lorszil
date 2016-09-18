@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-<style>
-
-    body { padding-top: 40px; }
-
-</style>
 
 
 <head>
+
+<style>
+
+body { padding-top: 40px; }
+
+</style>
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>User Story Manager</title>
@@ -23,7 +24,7 @@
               <a class="navbar-brand" href="#">User Story Manager</a>
             </div>
             <ul class="nav navbar-nav" "pagination">
-              <li><a href="story.html">Story</a></li>
+              <li><a href="http://localhost:5000/story">Story</a></li>
               <li class="active"><a href="#">List</a></li>
             </ul>
           </div>
@@ -53,8 +54,8 @@
                     <td>{{user_story.business_value}}</td>
                     <td>{{user_story.estimation_time}}</td>
                     <td>{{user_story.status}}</td>
-                    <td><button type="submit" class="btn btn-primary">Edit</button></td>
-                    <td><button type="submit" class="btn btn-danger">Delete</button></td>
+                    <td><a href={{site2}}/{{user_story.id}}><button type="submit" class="btn btn-primary">Edit</button></a></td>
+                    <td><a href={{site}}/{{user_story.id}}><button type="submit" class="btn btn-danger">Delete</button></a></td>
                 </tr>
             {% endfor %}
             </tbody>
