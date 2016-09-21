@@ -5,13 +5,13 @@
 {% set business_value = 100 %}
 {% set estimation_time = 0.5 %}
 {% set status = "" %}
-{% if user_story %}
-    {% set story_title = user_story.story_title %}
-    {% set user_story = user_story.user_story %}
-    {% set criteria = user_story.criteria %}
-    {% set business_value = user_story.business_value %}
-    {% set estimation_time = user_story.estimation_time %}
-    {% set status = user_story.status %}
+{% if user_stories %}
+    {% set story_title = user_stories.story_title %}
+    {% set user_story = user_stories.user_story %}
+    {% set criteria = user_stories.criteria %}
+    {% set business_value = user_stories.business_value %}
+    {% set estimation_time = user_stories.estimation_time %}
+    {% set status = user_stories.status %}
 {% endif %}
 
 <!DOCTYPE html>
